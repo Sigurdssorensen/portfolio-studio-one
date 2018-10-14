@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-studio-one",
+  "version": "1.0.0",
+  "description": "Portfolio website as part of the course 'Design Compution Studio One' at the University of Queensland.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "build-css": "node-sass --include-path scss scss/index.scss   public/css/index.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "Sigurd Sorensen",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4",
+    "sass": "^1.14.1"
+  }
+}
