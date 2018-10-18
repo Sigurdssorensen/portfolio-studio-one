@@ -1,0 +1,65 @@
+/* https://stackoverflow.com/questions/3758023/how-to-use-this-square-cursor-in-a-html-input-field */
+
+#cmd-card {
+  width: 40vw;
+
+  #cmd-header {
+    color: slategrey;
+    background-image: linear-gradient(to bottom, whitesmoke, lightgrey);
+    /*background: #3b4045; */
+  }
+
+  #cmd-outer {
+    background: black;
+    padding: 10px 10px 10px 10px;
+
+    #cmd {
+      font-family: courier;
+      font-size: 14px;
+      background: black;
+      color: #21f838;
+      padding: 5px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: 50vh;
+
+      #cursor {
+        float: left;
+        width: 5px;
+        height: 14px;
+        background: #21f838;
+      }
+    }
+    #the-input {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      /* end code snippet */
+    }
+  }
+}
+
+#cmd span {
+  float: left;
+  padding-left: 3px;
+  /* white-space: pre; */
+  word-wrap: break-word;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

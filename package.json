@@ -16,7 +16,7 @@
     "socket.io": "^2.1.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.4",
-    "sass": "^1.14.1"
+    "node-sass": "^4.9.4",
+    "nodemon": "^1.18.4"
   }
 }

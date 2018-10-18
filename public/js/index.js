@@ -1,30 +1,18 @@
 let socket = io.connect('localhost:3000');
 
-
 let commandLineLog = [];
-let path = 'C:\\HOME\\>';
+let path = 'C:\\Home\\>';
 
-socket.on('test', function(){
-   console.log('test successful');
-});
 
-/* https://stackoverflow.com/questions/3758023/how-to-use-this-square-cursor-in-a-html-input-field */
+/* TERMINAL FUNCTIONALITY */
+
 $('document').ready(function () {
-
+    /* https://stackoverflow.com/questions/3758023/how-to-use-this-square-cursor-in-a-html-input-field */
     let cursor;
-    $('#cmd').click(function () {
-        $('#the-input').focus();
-        cursor = window.setInterval(function () {
-            if ($('#cursor').css('visibility') === 'visible') {
-                $('#cursor').css({
-                    visibility: 'hidden'
-                });
-            } else {
-                $('#cursor').css({
-                    visibility: 'visible'
-                });
-            }
-        }, 500);
+    setCursorInterval();
+
+    $('#cmd').click(function (cursor) {
+        setCursorInterval(cursor);
     });
 
     $('#the-input').keydown(function (e) {
@@ -56,28 +44,53 @@ $('document').ready(function () {
     });
 
     $('#the-input').blur(function () {
+        clearCursorInterval();
+    });
+
+    function setCursorInterval() {
+
+        $('#the-input').focus();
+        cursor = window.setInterval(function () {
+            if ($('#cursor').css('visibility') === 'visible') {
+                $('#cursor').css({
+                    visibility: 'hidden'
+                });
+            } else {
+                $('#cursor').css({
+                    visibility: 'visible'
+                });
+            }
+        }, 500);
+    }
+
+    function clearCursorInterval() {
         clearInterval(cursor);
         $('#cursor').css({
             visibility: 'visible'
         });
-    });
+    }
+
 });
 /* end code snippet */
 
 function checkCommand() {
     return new Promise(async function (resolve) {
-        let commandEntry = commandLineLog[commandLineLog.length - 1];
-        let output = '';
-        socket.emit('entryRequest', commandEntry);
+        let commandEntry;
+
+        try {
+            commandEntry = commandLineLog[commandLineLog.length - 1].split(' ');
+        } catch(err) {
+            console.log(err);
+        }
+
+        socket.emit('entryRequest', commandEntry, path);
         await socket.on('entryResponse', function (data) {
-            console.log(data);
+            // console.log(data);
             resolve(data);
             // print to cmd
         });
     });
 }
-
-
 
 function cmdScrollToBottom() {
     /* Scrolls the command window of player one down to the bottom.*/
@@ -89,3 +102,10 @@ function cmdScrollToBottom() {
 
     $('#cmd').scrollTop = $('#cmd').scrollHeight - $('#cmd').clientHeight;
 }
+
+
+/* SOCKET EVENTS */
+
+socket.on('test', function(){
+    console.log('test successful');
+});
