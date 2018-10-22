@@ -8,8 +8,7 @@ module.exports = function(app, io, socket) {
     class Terminal {
         constructor() {
             socketsInfo.push({
-                id: socket.id,
-                internalPath: 0
+                id: socket.id
             });
         }
 
@@ -35,7 +34,7 @@ module.exports = function(app, io, socket) {
                 let data;
 
                 data = await getResponse(variables, variableKeys, commandKeys);
-
+                console.log(data);
                 socket.emit('entryResponse', data);
 
             });
@@ -44,7 +43,6 @@ module.exports = function(app, io, socket) {
             async function getResponse(variables, variableKeys, commandKeys) {
 
                 let output;
-
                 for (let key of commandKeys) {
 
                     if (key === variables.command) {

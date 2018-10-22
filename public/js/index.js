@@ -1,7 +1,7 @@
 let socket = io.connect('localhost:3000');
 
 let commandLineLog = [];
-let path = 'C:\\Home\\>';
+let path = 'C:/Home>';
 
 
 /* TERMINAL FUNCTIONALITY */
@@ -29,10 +29,12 @@ $('document').ready(function () {
             commandLineLog.push($('#command-line').text());
             // run checkCommand function
             let data = await checkCommand();
-            $("</br></br><span></span></br>").html("" + data + "").insertBefore("#cursor");
+            await render(data);
+
+            let displayPath = await replaceAll(path, '/', '\\');
 
             $('#command-line').removeAttr('id');
-            $("</br><span></span>").html("" + path + "").insertBefore("#cursor");
+            $("</br><span></span>").html("" + displayPath + "").insertBefore("#cursor");
             $("<span id='command-line'></span>").insertBefore("#cursor");
             $('#the-input').val("");
             $('#command-line').text("");
@@ -70,8 +72,37 @@ $('document').ready(function () {
         });
     }
 
+    /* UTILITY FUNCTIONS */
+    async function render(data) {
+        // CHECK FOR NULL IN DATA
+        if(data !== null) {
+            if('text' in data) {
+                $("</br>").html("").insertBefore("#cursor");
+                for(let index of data.text) {
+                    $("</br><span></span>").html("" + index + "").insertBefore("#cursor");
+                }
+                $("</br>").html("").insertBefore("#cursor");
+            }
+
+            if('path' in data) {
+                if(data.path !== null) {
+                    path = data.path;
+                }
+            }
+        } else {
+            // Invalid Action
+            $("</br>").html("").insertBefore("#cursor");
+            $("</br><span></span>").html("Invalid command entered").insertBefore("#cursor");
+            $("</br>").html("").insertBefore("#cursor");
+        }
+    }
 });
 /* end code snippet */
+
+// https://stackoverflow.com/questions/1144783/how-to-replace-all-occurrences-of-a-string-in-javascript
+function replaceAll(str, find, replace) {
+    return str.replace(new RegExp(find, 'g'), replace);
+}
 
 function checkCommand() {
     return new Promise(async function (resolve) {
