@@ -1,6 +1,15 @@
 /* https://stackoverflow.com/questions/3758023/how-to-use-this-square-cursor-in-a-html-input-field */
+body {
+  /*background: url("/img/background.png") no-repeat;
+  background-size: cover; */ }
+
+.container {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0; }
+
 #cmd-card {
-  width: 40vw; }
+  width: 100%; }
   #cmd-card #cmd-header {
     color: slategrey;
     background-image: linear-gradient(to bottom, whitesmoke, lightgrey);
@@ -34,3 +43,44 @@
   /* white-space: pre; */
   word-wrap: break-word;
   display: block; }
+
+#portfolio, #minerminer {
+  display: none; }
+
+#browser-card {
+  width: 100%; }
+  #browser-card #browser-header {
+    color: slategrey;
+    background-image: linear-gradient(to bottom, whitesmoke, lightgrey);
+    /*background: #3b4045; */ }
+  #browser-card #browser-outer {
+    background: #fdfdfd;
+    padding: 10px 10px 10px 10px; }
+    #browser-card #browser-outer .browser-body {
+      font-size: 14px;
+      color: black;
+      padding: 5px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 80vh;
+      max-height: 80vh; }
+      #browser-card #browser-outer .browser-body .nav-images {
+        height: auto;
+        width: auto;
+        max-width: 100%; }
+
+@media (min-width: 576px) {
+  .nav-images {
+    max-height: 40vh !important; } }
+
+@media (min-width: 768px) {
+  .nav-images {
+    max-height: 40vh !important; } }
+
+@media (min-width: 992px) {
+  .nav-images {
+    max-height: 20vh !important; } }
+
+@media (min-width: 1200px) {
+  .nav-images {
+    max-height: 20vh !important; } }

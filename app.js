@@ -5,6 +5,7 @@ const io = require('socket.io').listen(server);
 const port = 3000 || process.env.PORT;
 
 const terminal = require('./controllers/terminalController.js');
+const browser = require('./controllers/browserController.js');
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -21,6 +22,7 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket) {
     terminal(app, io, socket);
+    browser(app, io, socket);
 });
 
 

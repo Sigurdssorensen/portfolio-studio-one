@@ -2,6 +2,7 @@ let socket = io.connect('localhost:3000');
 
 let commandLineLog = [];
 let path = 'C:/Home>';
+let cssIdOPaths = ['portfolio', 'minerminer'];
 
 
 /* TERMINAL FUNCTIONALITY */
@@ -89,11 +90,26 @@ $('document').ready(function () {
                     path = data.path;
                 }
             }
+            if('cssId' in data) {
+                // set all other to not hidden
+                await setHidden();
+                $('#' + data.cssId).css({
+                    display: 'block'
+                });
+            }
         } else {
             // Invalid Action
             $("</br>").html("").insertBefore("#cursor");
             $("</br><span></span>").html("Invalid command entered").insertBefore("#cursor");
             $("</br>").html("").insertBefore("#cursor");
+        }
+    }
+
+    async function setHidden(){
+        for(let i of cssIdOPaths) {
+            $('#' + i).css({
+               display: 'none'
+            });
         }
     }
 });
@@ -106,10 +122,16 @@ function replaceAll(str, find, replace) {
 
 function checkCommand() {
     return new Promise(async function (resolve) {
-        let commandEntry;
+        let commandEntry = [];
 
         try {
-            commandEntry = commandLineLog[commandLineLog.length - 1].split(' ');
+            let com = commandLineLog[commandLineLog.length - 1].split(' ');
+            commandEntry.push(com[0]);
+            com = com.slice(1);
+            if(com.length > 0) {
+                com = com.join(' ');
+                commandEntry.push(com);
+            }
         } catch(err) {
             console.log(err);
         }
