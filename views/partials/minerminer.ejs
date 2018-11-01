@@ -1,69 +1,158 @@
 <div id="minerminer">
-    <div class="jumbotron">
-        <h1 class="display-4">Miner Miner</h1>
-        <p class="lead">Experience your morality waver under pressure</p>
-        <hr class="my-4">
-        <p>As the foreman of a 19th century coal mine, you're part of an ongoing battle between your business'
-            survival and the well being of your workers. Every choice you make has a consequence, will your morality waver?</p>
-        <a class="btn btn-primary btn-lg" href="#about-concept" role="button">Learn More</a>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12 col-lg-4">
-            <div class="card">
-                <img class="card-img-top nav-images" src="/img/placeholder.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">My Contributions</h5>
-                    <p class="card-text">View my contributions to the project.</p>
-                    <a href="#" class="btn btn-primary">Take me there</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12 col-lg-4">
-            <div class="card">
-                <img class="card-img-top nav-images" src="/img/placeholder.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Project Outcome</h5>
-                    <p class="card-text">Reflecting on the project's final outcome.</p>
-                    <a href="#" class="btn btn-primary">Take me there</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12 col-lg-4">
-            <div class="card">
-                <img class="card-img-top nav-images" src="/img/placeholder.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Course Reflection</h5>
-                    <p class="card-text">Reflecting on the course as a whole.</p>
-                    <a href="#" class="btn btn-primary">Take me there</a>
-                </div>
+    <div id="jumbo-background-image">
+        <div class="jumbotron" id="top">
+            <div class="jumbo-content">
+                <p class="lead jumbo-text jumbo-style">
+                    Experience your morality waver<br>
+                    under pressure
+                </p>
+                <a class="btn btn-primary btn-lg jumbo-btn" href="#about-concept" role="button" aria-label="Right Align">Learn More
+                    <i class="fas fa-angle-right btn-icon"></i>
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- ADD BACK TO TOP BUTTON - Absolute position? -->
-    <div class="row">
+
+    <div class="row card-section" style="padding-bottom: 5vh; padding-top: 5vh;">
+        <div class="col-sm-12 col-lg-4">
+            <div class="card minerminer-card">
+                <img class="card-img-top nav-images" src="/img/placeholder.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title card-colour">My Contributions</h5>
+                    <p class="card-text card-colour">View my contributions to the project.</p>
+                    <a href="#my-contributions" class="btn btn-primary">Take me there
+                        <i class="fas fa-angle-right btn-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+            <div class="card minerminer-card">
+                <img class="card-img-top nav-images" src="/img/placeholder.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title card-colour">Project Outcome</h5>
+                    <p class="card-text card-colour">Reflecting on the project's final outcome.</p>
+                    <a href="#project-outcome" class="btn btn-primary">Take me there
+                        <i class="fas fa-angle-right btn-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+            <div class="card minerminer-card">
+                <img class="card-img-top nav-images" src="/img/placeholder.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title card-colour">Course Reflection</h5>
+                    <p class="card-text card-colour">Reflecting on the course as a whole.</p>
+                    <a href="#course-reflection" class="btn btn-primary">Take me there
+                        <i class="fas fa-angle-right btn-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="back-to-top-row">
+        <div class="col-12">
+            <!-- ADD BACK TO TOP BUTTON - Absolute position? -->
+            <a id="back-to-top-btn" class="btn btn-primary" href="#top" role="button" style="font-size: 24px;">
+                <i class="fas fa-angle-up"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="row dark-section" style="padding-top: 5vh; padding-bottom: 5vh;">
         <div class="col-12">
             <h1 id="about-concept">About the Concept</h1>
+            <p>
+                Miner Miner is a simulation of difficult moral choices combined with the importance of
+                Workplace Health and Safety. The game puts you in a position where you have to choose
+                between the survival of your business and the well-being of your workforce. Playing the
+                game you will experience your own ethics being challenged and see the consequences to your
+                actions.
+            </p>
+            <p class="quote-indent">
+                As the foreman of a 19th century coal mine, you're part of an ongoing battle between your business'
+                survival and the well-being of your workers. Every choice you make comes with a consequence, will your morality waver?
+            </p>
+            <p>
+                The project uses the Queensland mining accidents 1882-1945 data set to establish an
+                emotional connection between real people that was injured or died as a result of a
+                mining accident and the choices you as a player make, in order to deliver an impact.
+            </p>
+            <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://miner-miner.herokuapp.com/">Play the Game
+                <i class="fas fa-angle-right btn-icon"></i>
+            </a>
+            <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://github.com/Sigurdssorensen/minerminer">View Source Code
+                <i class="fas fa-angle-right btn-icon"></i>
+            </a>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row light-section-no-pad" style="padding-top: 5vh; padding-bottom: 5vh;">
         <div class="col-12">
-            <h1>My Contributions</h1>
+            <div class="light-section-no-pad">
+                <h1 class="nav-header">My Contributions</h1>
+                <hr class="my-4">
+                <nav id="nav-contributions-navbar" class="navbar">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a href="#fat" class="nav-link active">@fat</a></li>
+                        <li class="nav-item"><a href="#mdo" class="nav-link">@mdo</a></li>
+                    </ul>
+                </nav>
+                <hr class="my-4">
+            </div>
+
+            <div class="nav-body scroll" id="nav-contributions" data-spy="scroll" data-target="#nav-contributions-navbar" data-offset="0">
+                <h4 id="fat">@fat</h4>
+                <p>....................................<br>
+                        ....................................<br>
+                        ....................................<br>
+                        ....................................<br>
+                        ....................................<br>
+                </p>
+                <h4 id="mdo">@mdo</h4>
+                <p>....................................<br>
+                        ....................................<br>
+                        ....................................<br>
+                        ....................................<br>
+                        ....................................<br>
+                        ....................................<br>
+                        ....................................<br>
+                        ....................................<br>
+                        ....................................<br>
+                        ....................................<br>
+                </p>
+            </div>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row dark-section" id="project-outcome" style="padding-top: 5vh; padding-bottom: 5vh;">
         <div class="col-12">
             <h1>Project Outcome</h1>
+            <p>
+                ....................................<br>
+                ....................................<br>
+                ....................................<br>
+                ....................................<br>
+                ....................................<br>
+                ....................................
+            </p>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row light-section" id="course-reflection" style="padding-top: 5vh; padding-bottom: 5vh;">
         <div class="col-12">
             <h1>Course Reflection</h1>
+            <p>
+                ....................................<br>
+                ....................................<br>
+                ....................................<br>
+                ....................................<br>
+                ....................................<br>
+                ....................................
+            </p>
         </div>
     </div>
-
 </div>

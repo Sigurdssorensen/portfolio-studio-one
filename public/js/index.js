@@ -1,8 +1,20 @@
 let socket = io.connect('localhost:3000');
 
+socket.commandLineLog = [];
+socket.path = 'C:/Home>';
+socket.cssIdOPaths = ['portfolio', 'minerminer'];
+socket.firstHelp = true;
+socket.firstDir = true;
+socket.firstCd = true;
+
+// Refactor from this to socket above
 let commandLineLog = [];
 let path = 'C:/Home>';
 let cssIdOPaths = ['portfolio', 'minerminer'];
+let firstHelp = true;
+let firstDir = true;
+let firstCd = true;
+let firstStart = true;
 
 
 /* TERMINAL FUNCTIONALITY */
@@ -35,7 +47,7 @@ $('document').ready(function () {
             let displayPath = await replaceAll(path, '/', '\\');
 
             $('#command-line').removeAttr('id');
-            $("</br><span></span>").html("" + displayPath + "").insertBefore("#cursor");
+            $("<br><span></span>").html("" + displayPath + "").insertBefore("#cursor");
             $("<span id='command-line'></span>").insertBefore("#cursor");
             $('#the-input').val("");
             $('#command-line').text("");
@@ -78,11 +90,34 @@ $('document').ready(function () {
         // CHECK FOR NULL IN DATA
         if(data !== null) {
             if('text' in data) {
-                $("</br>").html("").insertBefore("#cursor");
+                $("<br>").html("").insertBefore("#cursor");
                 for(let index of data.text) {
-                    $("</br><span></span>").html("" + index + "").insertBefore("#cursor");
+                    $("<br><span></span>").html("" + index + "").insertBefore("#cursor");
                 }
-                $("</br>").html("").insertBefore("#cursor");
+                $("<br>").html("").insertBefore("#cursor");
+            }
+
+            if('help' in data) {
+                if(firstHelp) {
+                    $("<br>").html("").insertBefore("#cursor");
+                    $("<span></span><br>").html("Try the 'dir' command").insertBefore("#cursor");
+                    firstHelp = false;
+                }
+            }
+
+            if('dir' in data) {
+                if(firstDir) {
+                    $("<br><span></span><br>").html("Try typing 'cd' + 'dir name' command").insertBefore("#cursor");
+                    firstDir = false;
+                }
+            }
+
+            if('cd' in data) {
+                if(firstCd) {
+                    $("<br><br><span></span><br>").html("Use 'dir' to see all files").insertBefore("#cursor");
+                    $("<span></span><br>").html("followed by 'start' + 'file name'").insertBefore("#cursor");
+                    firstCd = false;
+                }
             }
 
             if('path' in data) {
@@ -96,12 +131,17 @@ $('document').ready(function () {
                 $('#' + data.cssId).css({
                     display: 'block'
                 });
+                if(firstStart) {
+                    $("<br><br><span></span><br>").html("To exit use 'taskkill'").insertBefore("#cursor");
+                    $("<span></span><br>").html("To go back use 'cd' + '..'").insertBefore("#cursor");
+                    firstStart = false;
+                }
             }
         } else {
             // Invalid Action
-            $("</br>").html("").insertBefore("#cursor");
+            $("<br><br>").html("").insertBefore("#cursor");
             $("</br><span></span>").html("Invalid command entered").insertBefore("#cursor");
-            $("</br>").html("").insertBefore("#cursor");
+            $("<br>").html("").insertBefore("#cursor");
         }
     }
 

@@ -11,6 +11,19 @@ body {
   padding-left: 0;
 }
 
+.scroll::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #666666;
+  outline: 1px solid white;
+}
+
 #cmd-card {
   width: 100%;
 
@@ -65,6 +78,42 @@ body {
 #browser-card {
   width: 100%;
 
+  h1 {
+    color: #000000;
+  }
+
+  p {
+    color: #000000;
+    font-size: 18px;
+  }
+
+  .my-4 {
+    margin: 0 0 0 0 !important;
+  }
+
+  .dark-section {
+    background-color: #666666;
+    padding: 0 1.25rem 0 1.25rem;
+  }
+
+  .light-section {
+    background-color: #AFAFAF;
+    padding: 0 1.25rem 0 1.25rem;
+  }
+
+  .light-section-no-pad {
+    background-color: #AFAFAF;
+  }
+
+  .card-section {
+    background-color: #AFAFAF;
+    padding: 0 1.25rem 0 1.25rem;
+  }
+
+  .card-section a {
+    font-size: 14px;
+  }
+
   #browser-header {
     color: slategrey;
     background-image: linear-gradient(to bottom, whitesmoke, lightgrey);
@@ -84,33 +133,142 @@ body {
       height: 80vh;
       max-height: 80vh;
 
+      #jumbo-background-image {
+        background: url("/img/minerminer-hero.png") no-repeat center;
+        background-size: cover;
+      }
+
+      .jumbo-style  {
+        color: #AFAFAF;
+      }
+
+      #top {
+        background-color: rgba(0,0,0,0);
+        margin-bottom: 0;
+      }
+
+      .jumbo-text {
+        padding-top: 15%;
+      }
+
+      .btn {
+        background-color: rgba(0,0,0,0);
+        color: #FCD21D;
+        border-color: rgba(0,0,0,0);
+
+        i {
+          vertical-align: inherit;
+        }
+
+        .btn-icon {
+          padding-left: 5px;
+        }
+      }
+
+      .btn:hover {
+        border-color: #FCD21D;
+      }
+
+      .quote-indent {
+        padding-left: 2rem;
+        border-left: 4px solid black;
+      }
+
+      .minerminer-card {
+        background-color: #302D39;
+
+        h5 {
+          font-size: 1.15rem;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        .card-colour {
+          color: #AFAFAF;
+        }
+      }
+
       .nav-images {
         height: auto;
         width: auto;
         max-width: 100%;
       }
     }
+
+    #nav-contributions {
+      position: relative;
+      height: 400px;
+      overflow: auto;
+    }
+
+    .nav-header {
+      margin-left: 1.5rem;
+    }
+
+    .nav-body {
+      margin-left: 1.5rem;
+    }
+
+    .nav-pills a {
+      color: #FCD21D;
+      border-color: rgba(0, 0, 0, 0);
+    }
+
+    .nav-link.active {
+      background-color: rgba(0,0,0,0);
+      border: 1px solid #FCD21D;
+    }
   }
+}
+
+#back-to-top-row {
+  position: fixed;
+  bottom: 4%;
+  left: 62%;
+  z-index: 5;
+}
+
+#back-to-top-btn {
+  border-radius: 50%;
 }
 
 @media(min-width:576px){
   .nav-images {
     max-height: 40vh !important;
   }
+  #back-to-top-row {
+    left: 71%;
+  }
 }
 @media(min-width:768px) {
   .nav-images {
     max-height: 40vh !important;
+  }
+  #back-to-top-row {
+    left: 79%;
   }
 }
 @media(min-width:992px){
   .nav-images {
     max-height: 20vh !important;
   }
+  #back-to-top-row {
+    left: 90%;
+    padding-bottom: 7vh;
+  }
+  .jumbo-content {
+    padding-left: 10%;
+  }
 }
 @media(min-width:1200px){
   .nav-images {
     max-height: 20vh !important;
+  }
+  #back-to-top-row {
+    left: 90%;
+    padding-bottom: 7vh;
   }
 }
 
