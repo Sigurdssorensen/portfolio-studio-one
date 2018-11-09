@@ -62,6 +62,7 @@
         </div>
     </div>
 
+
     <div class="row dark-section" style="padding-top: 5vh; padding-bottom: 5vh;">
         <div class="col-12">
             <h1 id="about-concept">About the Concept</h1>
@@ -81,6 +82,8 @@
                 emotional connection between real people that was injured or died as a result of a
                 mining accident and the choices you as a player make, in order to deliver an impact.
             </p>
+
+            <!-- https://stackoverflow.com/questions/15551779/open-link-in-new-tab-or-window -->
             <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://miner-miner.herokuapp.com/">Play the Game
                 <i class="fas fa-angle-right btn-icon"></i>
             </a>
@@ -90,43 +93,263 @@
         </div>
     </div>
 
-    <div class="row light-section-no-pad" style="padding-top: 5vh; padding-bottom: 5vh;">
+
+    <div class="row light-section-no-pad" id="my-contributions" style="padding-top: 5vh; padding-bottom: 5vh;">
         <div class="col-12">
             <div class="light-section-no-pad">
                 <h1 class="nav-header">My Contributions</h1>
                 <hr class="my-4">
                 <nav id="nav-contributions-navbar" class="navbar">
                     <ul class="nav nav-pills">
-                        <li class="nav-item"><a href="#fat" class="nav-link active">@fat</a></li>
-                        <li class="nav-item"><a href="#mdo" class="nav-link">@mdo</a></li>
+                        <li class="nav-item"><a href="#planning" class="nav-link active">planning</a></li>
+                        <li class="nav-item"><a href="#decision" class="nav-link">decision</a></li>
+                        <li class="nav-item"><a href="#implementation" class="nav-link">implementation</a></li>
+                        <li class="nav-item"><a href="#showcase" class="nav-link">showcase</a></li>
                     </ul>
                 </nav>
                 <hr class="my-4">
             </div>
 
-            <div class="nav-body scroll" id="nav-contributions" data-spy="scroll" data-target="#nav-contributions-navbar" data-offset="0">
-                <h4 id="fat">@fat</h4>
-                <p>....................................<br>
-                        ....................................<br>
-                        ....................................<br>
-                        ....................................<br>
-                        ....................................<br>
-                </p>
-                <h4 id="mdo">@mdo</h4>
-                <p>....................................<br>
-                        ....................................<br>
-                        ....................................<br>
-                        ....................................<br>
-                        ....................................<br>
-                        ....................................<br>
-                        ....................................<br>
-                        ....................................<br>
-                        ....................................<br>
-                        ....................................<br>
-                </p>
+            <div class="nav-body scroll" id="nav-contributions" data-spy="scroll" data-target="#nav-contributions-navbar" data-offset="25">
+                <h3 id="planning">Planning</h3>
+                <h4>Design Exploration</h4>
+                <div class="row paragraph-spacing">
+                    <div class="col-12">
+                        <p style="margin-bottom: 0;">
+                            The purpose of the design exploration was to find new and creative ways of utilising one or more of
+                            the API's listed on the State Library of Queensland's website. The API I went with was the Quuensland
+                            Mining Accidents 1882-1945 as this was one of the more complete and consistent API's.
+                        </p>
+                    </div>
+                </div>
+                <div class="row paragraph-spacing">
+                    <div class="col-6 process-list-div">
+                        <p style="margin-bottom: 0.5rem;">
+                            <strong>Process</strong><br>
+                            <hr class="my-4">
+                            <span class="process-list" style="padding-top: 1.5rem;">
+                                <i class="fas fa-lightbulb"></i>
+                                Ideation
+                            </span><br>
+                            <span class="process-list">
+                                <i class="fas fa-paint-brush"></i>
+                                Design
+                            </span><br>
+                            <span class="process-list">
+                                <i class="fas fa-theater-masks"></i>
+                                Presentation & Pitch
+                            </span>
+                            <hr class="my-4">
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="/img/posterFilePNG.png" alt="Picture of a poster" style="width: 100%; border: 1px solid grey;">
+                    </div>
+                </div>
+                <div class="row paragraph-spacing">
+                    <div class="col-12">
+                        <p>
+                            <i class="fas fa-lightbulb"></i>
+                            <strong>Ideation.</strong>
+                            It took quite some time coming up with an idea that felt both unique and engaging.
+                            Going through the ideation process I worked through several iterations on the original ideas
+                            trying to find an unique angle, but due to limitations in the API's I scrapped most of them.
+                        </p>
+                        <p>
+                            As a tool for coming up with an idea I started to reverse engineer the API's looking for
+                            coherent data and consistency in data entry, which resulted in only a few API's standing out.
+                            One of the stronger API's was the Quuensland Mining Accidents 1882-1945, which after bouncing
+                            some ideas off a classmate led to the concept of teaching kids about workplace health and
+                            safety (WHS) and geology.
+                        </p>
+                        <p>
+                            Knowing that in order to create an engaging teaching platform for kids I should
+                            consider including a gamification aspect to the platform. The first idea was to have the
+                            users control the miners, but to avoid creating to much game art I quickly scoped down
+                            to instead have the users control the foreman of a 19th century coal mine.
+                        </p>
+                    </div>
+                </div>
+                <div class="row paragraph-spacing">
+                    <div class="col-12">
+                        <p>
+                            <i class="fas fa-paint-brush"></i>
+                            <strong>Design.</strong>
+                            Because the assignment was to produce a digital poster to present the idea, and a lack of
+                            digital drawing skills on my part, I chose to go for a forgiving comic art style.
+                            To avoid creating to many assets, I came to the conclusion of using the foreman's office
+                            as the landing screen of the platform. The initial idea was to implement three elements,
+                            1. A book for researching establishing a timeline, 2. a computer for research, 3. a notepad
+                            for putting together the pieces. At this point in time the platform was going to be a game
+                            that let you research and figure out what happened to people during a mining accident. Given
+                            that the game were to take place in the 19th century, the computer would at a later stage
+                            have to be swapped out with something else.
+                        </p>
+                        <p>
+                            I quickly did some research into old mining offices, and found some inspirational pictures.
+                            Based on these I put together a wireframe and was happy enough with the first draft to
+                            start designing the final poster in Photoshop.
+                        </p>
+                    </div>
+                </div>
+                <div class="row paragraph-spacing">
+                    <div class="col-12">
+                        <p>
+                            <i class="fas fa-theater-masks"></i>
+                            <strong>Presentation & Pitch.</strong>
+                            Due to a short time slot per presentation, I chose to do a standard walkthrough of the
+                            problem statement, solution and target market. Ideally, I would have liked to include a
+                            unique value proposition (UVP), but I did not have one at this stage.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 id="decision">Decision</h3>
+                <h4>Major Project A</h4>
+                <div class="row paragraph-spacing">
+                    <div class="col-12">
+                        <p style="margin-bottom: 0;">
+                            At this stage groups had been formed and our team started to work on the concept document
+                            and pitch for the second assessment. Our team sat down together and discussed which parts
+                            of the various projects we wanted to work on. In the end we ended up with a good mix of my
+                            project and Thomas' project with some additional features from Aslam and Al's projects.
+                        </p>
+                    </div>
+                </div>
+                <div class="row paragraph-spacing">
+                    <div class="col-12" style="text-align: center;">
+                        <p style="margin-bottom: 0.5rem;">
+                            <strong>Process</strong><br>
+                        <hr class="my-4">
+                        <span class="process-list" style="padding-top: 1.5rem;">
+                                <i class="fas fa-pencil-alt"></i>
+                                Concept Document
+                            </span><br>
+                        <span class="process-list">
+                                <i class="fas fa-theater-masks"></i>
+                                Presentation & Pitch
+                            </span>
+                        <hr class="my-4">
+                        </p>
+                    </div>
+                </div>
+                <div class="row paragraph-spacing">
+                    <div class="col-12">
+                        <p>
+                            <i class="fas fa-pencil-alt"></i>
+                            <strong>Concept Document.</strong>
+                            For the concept document we allocated tasks to everybody, whereas my parts were to
+                            set up the document structure and to write the sections on task flows, general purpose, project
+                            structure, team and possible issues. I also co-wrote / -created the gantt chart and milestone
+                            plan with Thomas because we have a background in marketing and would be able to do so
+                            quickly. Before finishing, Al went over the document and did the design for all elements.
+                        </p>
+                    </div>
+                </div>
+                <div class="row paragraph-spacing">
+                    <div class="col-12">
+                        <p>
+                            <i class="fas fa-theater-masks"></i>
+                            <strong>Presentation & Pitch.</strong>
+                            For the purpose of presentation we created a pitch deck which was written mostly by me
+                            and designed by Al. As for the presentation itself, we decided on having the strong speakers
+                            do the pitch, which was Thomas, Aslam and I.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 id="implementation">Implementation</h3>
+                <h4>Major Project B & C</h4>
+                <div class="row paragraph-spacing">
+                    <div class="col-12">
+                        <p style="margin-bottom: 0;">
+                            As for the implementation of the project, Thomas and I got the responsibility of building
+                            the back-end, whilst Al were to create the artwork, and Aslam to implement the front-end.
+                            Although the initial plan was to implement both a monetary aspect, contracts and extensions
+                            we realised early on in development that we had to scope down due to the vast amount of work
+                            that would take. We ended up focusing on the Workplace Health and Safety policies and
+                            employee folder functions.
+                        </p>
+                    </div>
+                </div>
+                <div class="row paragraph-spacing">
+                    <div class="col-12" style="text-align: center;">
+                        <p style="margin-bottom: 0.5rem;">
+                            <strong>Process</strong><br>
+                        <hr class="my-4">
+                        <span class="process-list" style="padding-top: 1.5rem;">
+                            <i class="fas fa-code"></i>
+                            MVP
+                        </span><br>
+                        <span class="process-list">
+                            <i class="fas fa-code"></i>
+                            Demo
+                        </span>
+                        <hr class="my-4">
+                        </p>
+                    </div>
+                </div>
+                <div class="row paragraph-spacing">
+                    <div class="col-12">
+                        <p style="margin-bottom: 0;">
+                            <i class="fas fa-code"></i>
+                            <strong>MVP.</strong>
+                            For the prototype in Major Project B, I mainly worked on the Workplace Health and Safety
+                            feature, where I implemented a file-reading mechanism that read policies from a file and
+                            created an object for each policy.
+                            <br><br>
+                            In collaboration with Thomas, we created the user.js file that represents the visiting user
+                            of the website, of which stores all data as unique to that user. My part of this was to
+                            implement get and set functions to the Workplace Health and Safety file and some additional
+                            utility functions. As for app.js, I did the initial setup of the project and app.js, but
+                            both Aslam, Thomas and I have worked in this file. Whereas Aslam mainly did the rendering
+                            by using EJS, and Thomas worked on the /employee-folder and /monthly-report routes, I worked
+                            on /whs-policies, /whs-policies:option and /player-reset.
+                            <br><br>
+                            The main focus we had for the prototype was to create one in-game month/ cycle. This was
+                            important for us to achieve in order to have a testable product that used the API in a
+                            dynamic manner.
+                        </p>
+                    </div>
+                </div>
+                <div class="row paragraph-spacing">
+                    <div class="col-12">
+                        <p style="margin-bottom: 0;">
+                            <i class="fas fa-code"></i>
+                            <strong>Demo.</strong>
+                            As for the next step, working towards the trade show, we decided upon only implementing
+                            a monetary aspect as an additional feature, due to time restrictions, and to go over our
+                            previous work to create a more solid foundation.
+                            <br><br>
+                            As part of this, my part was to divide the policies into three different folders and serve
+                            up the types of polices that matched the type of accident from the mining API. In order to
+                            do this I also had to rework the user.js file to serve the correct array when called upon
+                            based on what accidents could occur.
+                            <br><br>
+                            In addition to the tasks above, both Thomas and I worked on implementing the monetary aspect
+                            into the game, whereas I for the most part implemented it into the policies and Thomas into
+                            the employee folder. The rest of it was mostly collaborative work. The main goal for this
+                            part was to implement as many cycles are there were policies in order to have a scalable
+                            game working.
+                        </p>
+                    </div>
+                </div>
+                <h3 id="showcase">Showcase</h3>
+                <h4>Major Project C</h4>
+                <div class="row paragraph-spacing">
+                    <div class="col-12">
+                        <p style="margin-bottom: 0;">
+                           After completing a demo of the product, we showcased it on the trade show, using some power
+                            point slides on a monitor to walk through what the game is, and the game itself locally
+                            hosted on a laptop. In addition to this we got some fake hardhats and all wore black of
+                            which would put emphasis on our black and yellow theme.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 
     <div class="row dark-section" id="project-outcome" style="padding-top: 5vh; padding-bottom: 5vh;">
         <div class="col-12">
@@ -142,16 +365,108 @@
         </div>
     </div>
 
+
     <div class="row light-section" id="course-reflection" style="padding-top: 5vh; padding-bottom: 5vh;">
         <div class="col-12">
             <h1>Course Reflection</h1>
+            <h3>Pros</h3>
             <p>
-                ....................................<br>
-                ....................................<br>
-                ....................................<br>
-                ....................................<br>
-                ....................................<br>
-                ....................................
+                <span class="process-list">
+                    <i class="fas fa-plus"></i>
+                    <strong>Great Workshops.</strong>
+                    The workshops in this course are really great. The tutor knows what he's talking about and has a
+                    nice way of explaining complex concepts in an easy and engaging way.
+                </span><br>
+                <span class="process-list">
+                    <i class="fas fa-plus"></i>
+                    <strong>Feedback.</strong>
+                    The tutors are great at getting involved in the students' projects and provides great feedback to
+                    every step along the way.
+                </span><br>
+                <span class="process-list">
+                    <i class="fas fa-plus"></i>
+                    <strong>Pushes Learning.</strong>
+                    Although I feel the course is spread to thin, which results in a feeling of having to much to do
+                    , I still feel that the amount of work pushes us to learn a lot in a short amount of time, which
+                    is very good.
+                </span><br>
+                <span class="process-list">
+                    <i class="fas fa-plus"></i>
+                    <strong>Easygoing.</strong>
+                    It is easy to get in touch with the staff and just get to know them better. It makes for a very
+                    comfortable learning situation where you're able to get to know your tutors and have a chat.
+                </span><br>
+                <span class="process-list">
+                    <i class="fas fa-plus"></i>
+                    <strong>Portfolio.</strong>
+                    I like that we are encouraged to start working on a portfolio at a early stage in our degree. This
+                    shows a focus towards helping the students get a job and not just teach how to a better academic.
+                </span><br>
+            </p>
+
+            <h3>Cons</h3>
+            <p>
+                <span class="process-list">
+                    <i class="fas fa-minus"></i>
+                    <strong>Spread to thin.</strong>
+                    The course have spread itself to thin when it comes to assignments. There are to many areas to focus
+                    on at the same time and as a result of this I never felt proud of any assessments I turned in, as they
+                    had to be rushed in order to jump into the next assignment. Moreover, based on basic UX psychology,
+                    human beings are capable of focusing on 7 [+-2] things at the time. This subject alone has journals,
+                    a major project, portfolio, and workshops that all have to be tackled differently in addition to
+                    three other subjects who does the same, and thus quickly add up to the 7 [+-2] quota.
+                </span><br>
+                <span class="process-list">
+                    <i class="fas fa-minus"></i>
+                    <strong>Macro perspective.</strong>
+                    As a result of a tightly packed course with three major project deliveries with pitches, one design
+                    exploration with presentation, weekly journals, and a big portfolio at the end, I never had time to
+                    take a step back and look at the bigger picture and plan ahead. For me this meant that I did not get
+                    to plan out and establish a design/ working process for the current assessment, as I had to get
+                    started writing if I wanted to see a ready product.
+                </span><br>
+                <span class="process-list">
+                    <i class="fas fa-minus"></i>
+                    <strong>Teach what you expect.</strong>
+                    I feel there is a gap between what the course expects and what the course teaches. E.g., the design
+                    exploration expected us to know how to digitally design a poster, but at this point in time we
+                    had never touched on how to design a poster or the principles behind design. For the journals and
+                    portfolio, it is expected that we analyse our design process, but the reality is that we have not
+                    been taught a design process, and are expected to just come up with one along the way.
+                </span><br>
+                <span class="process-list">
+                    <i class="fas fa-minus"></i>
+                    <strong>Write everything twice.</strong>
+                    Working on both the journals and the portfolio felt more like repetitive work than engaging and
+                    rewarding, as they are but a copy of each other. Although the idea is to have quality in the
+                    portfolio and quantity in the journal, you can't really write a journal without explaining somewhat
+                    in depth, and you can't go much more in depth when writing the portfolio as there is not much more
+                    to be said when I haven't had the opportunity to actually create a working process to analyse.
+                </span><br>
+            </p>
+            <h3>Suggestions</h3>
+            <p>
+                <span class="process-list">
+                    <i class="fas fa-exclamation"></i>
+                    <strong>Combine Assignments.</strong>
+                    Include the journals in the major project assessments as documentation or double down on the
+                    portfolio and get rid of the journals. This would ensure the same amount of work, equal results, but
+                    less things to keep track of and less repetitive work.
+                </span><br>
+                <span class="process-list">
+                    <i class="fas fa-exclamation"></i>
+                    <strong>Design Process.</strong>
+                    If you wish to have students analyse their design process, include a design process delivery early on
+                    so that students are forced to think through this at an early stage instead of having it as an after
+                    thought in between all other assignments across all subjects.
+                </span><br>
+                <span class="process-list">
+                    <i class="fas fa-exclamation"></i>
+                    <strong>Workshop Lessons.</strong>
+                    Lessons on Illustrator, Photoshop and InDesign should be front-loaded as the design exploration is
+                    the first assignment to come up, and some people, myself included, have no clue what they are doing
+                    in terms of design and approach.
+                </span><br>
             </p>
         </div>
     </div>

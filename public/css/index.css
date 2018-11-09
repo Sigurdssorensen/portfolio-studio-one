@@ -54,14 +54,14 @@ body {
   word-wrap: break-word;
   display: block; }
 
-#portfolio, #minerminer {
+#portfolio, #minerminer, #about {
   display: none; }
 
 #browser-card {
   width: 100%; }
   #browser-card h1 {
     color: #000000; }
-  #browser-card p {
+  #browser-card p, #browser-card span {
     color: #000000;
     font-size: 18px; }
   #browser-card .my-4 {
@@ -132,17 +132,27 @@ body {
     #browser-card #browser-outer #nav-contributions {
       position: relative;
       height: 400px;
-      overflow: auto; }
+      overflow: auto;
+      padding-top: 3vh; }
     #browser-card #browser-outer .nav-header {
       margin-left: 1.5rem; }
     #browser-card #browser-outer .nav-body {
-      margin-left: 1.5rem; }
+      margin-left: 1.5rem;
+      padding-right: 1.5rem; }
     #browser-card #browser-outer .nav-pills a {
       color: #FCD21D;
       border-color: rgba(0, 0, 0, 0); }
     #browser-card #browser-outer .nav-link.active {
       background-color: rgba(0, 0, 0, 0);
       border: 1px solid #FCD21D; }
+    #browser-card #browser-outer .paragraph-spacing {
+      padding-bottom: 1.5rem; }
+    #browser-card #browser-outer .process-list-div {
+      text-align: center;
+      padding-top: 10%; }
+    #browser-card #browser-outer .process-list {
+      display: inline-block;
+      padding: 0 0 1.5rem 0; }
 
 #back-to-top-row {
   position: fixed;

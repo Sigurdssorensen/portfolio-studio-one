@@ -1,16 +1,18 @@
 let socket = io.connect('localhost:3000');
 
+// not yet in use
 socket.commandLineLog = [];
 socket.path = 'C:/Home>';
-socket.cssIdOPaths = ['portfolio', 'minerminer'];
+socket.cssIdOPaths = ['portfolio', 'minerminer', 'about'];
 socket.firstHelp = true;
 socket.firstDir = true;
 socket.firstCd = true;
+// not yet in use
 
 // Refactor from this to socket above
 let commandLineLog = [];
 let path = 'C:/Home>';
-let cssIdOPaths = ['portfolio', 'minerminer'];
+let cssIdOPaths = ['portfolio', 'minerminer', 'about'];
 let firstHelp = true;
 let firstDir = true;
 let firstCd = true;
