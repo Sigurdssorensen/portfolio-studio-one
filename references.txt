@@ -1,8 +1,53 @@
-https://fontawesome.com/icons/paint-brush?style=solid
-https://fontawesome.com/icons/lightbulb?style=solid
-https://fontawesome.com/icons/theater-masks?style=solid
-https://fontawesome.com/icons/pencil-alt?style=solid
-https://fontawesome.com/icons/plus?style=solid
-https://fontawesome.com/icons/minus?style=solid
-https://fontawesome.com/icons/code?style=solid
-https://fontawesome.com/icons/exclamation?style=solid
+The sources that have been used globally throughout the project are referenced to here instead of in all cases where
+they have been used as this would cause chaos in the code. Amongst these are the third-party software.
+
+Icons:
+Fonticons.inc(n.d)Font Awesome. Retrieved from:
+    https://fontawesome.com/
+    https://fontawesome.com/icons/paint-brush?style=solid
+    https://fontawesome.com/icons/lightbulb?style=solid
+    https://fontawesome.com/icons/theater-masks?style=solid
+    https://fontawesome.com/icons/pencil-alt?style=solid
+    https://fontawesome.com/icons/plus?style=solid
+    https://fontawesome.com/icons/minus?style=solid
+    https://fontawesome.com/icons/code?style=solid
+    https://fontawesome.com/icons/exclamation?style=solid
+
+
+Third-party Software:
+    Hampton C., Weizenbaum N., Eppstein C.(n.d)Sass. Retrieved from:
+        https://sass-lang.com/
+    @rem(n.d)Nodemon. Retrieved from:
+        https://nodemon.io/
+    Matthew Eernisse(n.d)Ejs. Retrieved from:
+        https://ejs.co/
+    StrongLoop, IBM(n.d.)express. Retrieved from:
+        https://expressjs.com/
+    socket.io(n.d)socket.io. Retrieved from:
+        https://socket.io/
+    The JQuery Foundation(n.d)JQuery. Retrieved from:
+        https://jquery.com/
+    @mdo @fat(n.d)Bootstrap. Retrieved from:
+        https://getbootstrap.com/
+
+Images:
+    All images except for the PosterFilePNG.png which I created myself, that have been used in this portfolio have been
+    created by Al from the Major Project team, whom have been kind enough to allow us to use his pictures.
+    Muhammad Al Mahdi(2018)unknown title. Renamed(course.png)
+    Muhammad Al Mahdi(2018)unknown title. Renamed(game.png)
+    Muhammad Al Mahdi(2018)unknown title. Renamed(minerminer-hero.png)
+    Muhammad Al Mahdi(2018)unknown title. Renamed(team.png)
+    Retrieved from: personal contact with the creator.
+
+    Sigurd Sæther Sørensen(2018)PosterFilePNG.png.
+    Retrieved from: picture made by myself.
+
+Code:
+Stack Overflow(2017)How do I make the first letter of a string uppercase in JavaScript?. Retrieved from:
+    https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript
+Stack Overflow(2016)How to use this square cursor in a HTML input field?. Retrieved from:
+    https://stackoverflow.com/questions/3758023/how-to-use-this-square-cursor-in-a-html-input-field
+Stack Overflow(2017)How to replace all occurrences of a string in JavaScript?. Retrieved from:
+    https://stackoverflow.com/questions/1144783/how-to-replace-all-occurrences-of-a-string-in-javascript
+Stack Overflow(2017)Scroll to bottom of div?. Retrieved from:
+    https://stackoverflow.com/questions/270612/scroll-to-bottom-of-div

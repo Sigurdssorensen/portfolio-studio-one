@@ -22,7 +22,10 @@ let firstStart = true;
 /* TERMINAL FUNCTIONALITY */
 
 $('document').ready(function () {
-    /* https://stackoverflow.com/questions/3758023/how-to-use-this-square-cursor-in-a-html-input-field */
+    /* The code snippet (1. How to use this square cursor in a HTML input field?) below has been adapted from:
+   https://stackoverflow.com/questions/3758023/how-to-use-this-square-cursor-in-a-html-input-field
+   The code has been altered to fit the specific needs of this website.
+   */
     let cursor;
     setCursorInterval();
 
@@ -86,6 +89,10 @@ $('document').ready(function () {
             visibility: 'visible'
         });
     }
+
+    /*
+    * End code snippet (1.How to use this square cursor in a HTML input field?)
+    */
 
     /* UTILITY FUNCTIONS */
     async function render(data) {
@@ -156,11 +163,18 @@ $('document').ready(function () {
     }
 });
 /* end code snippet */
-
-// https://stackoverflow.com/questions/1144783/how-to-replace-all-occurrences-of-a-string-in-javascript
+/*
+* The code snippet (1. How to replace all occurrences of a string in JavaScript?) below have been sourced from:
+* https://stackoverflow.com/questions/1144783/how-to-replace-all-occurrences-of-a-string-in-javascript.
+* The code appears in its original form.
+* */
 function replaceAll(str, find, replace) {
     return str.replace(new RegExp(find, 'g'), replace);
 }
+
+/*
+* End code snippet (1. How to replace all occurrences of a string in JavaScript?)
+* */
 
 function checkCommand() {
     return new Promise(async function (resolve) {
@@ -190,13 +204,17 @@ function checkCommand() {
 function cmdScrollToBottom() {
     /* Scrolls the command window of player one down to the bottom.*/
 
-    /* The code snippet (4. Scroll to bottom of div?) below has been altered from:
+    /* The code snippet (4. Scroll to bottom of div?) below have been altered from:
     https://stackoverflow.com/questions/270612/scroll-to-bottom-of-div
     The variables calling the scrollTop has been altered from the original example.
     */
 
     $('#cmd').scrollTop = $('#cmd').scrollHeight - $('#cmd').clientHeight;
 }
+
+/*
+* End code snippet (4. Scroll to bottom of div?).
+* */
 
 
 /* SOCKET EVENTS */

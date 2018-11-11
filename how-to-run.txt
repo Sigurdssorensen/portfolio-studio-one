@@ -1,0 +1,12 @@
+Path A
+1. Visit the following hosted heroku app:
+
+Path B
+1. Download Node.js and open the command prompt in this folder.
+2. Write the command 'npm init'
+3. Write the command 'npm start'
+4. Open up your browser to 'localhost:3000'
+
+
+Disclaimer:
+All commands have to be written in lowercase characters as there are some issues with uppercase characters at the moment.

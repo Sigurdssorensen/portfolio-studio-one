@@ -1,4 +1,3 @@
-/* https://stackoverflow.com/questions/3758023/how-to-use-this-square-cursor-in-a-html-input-field */
 
 body {
   /*background: url("/img/background.png") no-repeat;
@@ -37,6 +36,9 @@ body {
     background: black;
     padding: 10px 10px 10px 10px;
 
+    /* The code snippet (1. How to use this square cursor in a HTML input field?) below has been adapted from:
+    https://stackoverflow.com/questions/3758023/how-to-use-this-square-cursor-in-a-html-input-field
+    The code has been altered to fit the specific needs of this website.*/
     #cmd {
       font-family: courier;
       font-size: 14px;
@@ -58,7 +60,7 @@ body {
       width: 0;
       height: 0;
       opacity: 0;
-      /* end code snippet */
+
     }
   }
 }
@@ -70,6 +72,9 @@ body {
   word-wrap: break-word;
   display: block;
 }
+/*
+* End code snippet (1.How to use this square cursor in a HTML input field?)
+*/
 
 #portfolio, #minerminer, #about {
   display: none;
@@ -142,7 +147,7 @@ body {
         color: #AFAFAF;
       }
 
-      #top {
+      #top, #top-about, #top-portfolio {
         background-color: rgba(0,0,0,0);
         margin-bottom: 0;
       }
@@ -241,7 +246,7 @@ body {
 
 #back-to-top-row {
   position: fixed;
-  bottom: 4%;
+  bottom: 8%;
   left: 62%;
   z-index: 5;
 }
