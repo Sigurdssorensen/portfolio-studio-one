@@ -4,7 +4,7 @@
   "description": "Portfolio website as part of the course 'Design Compution Studio One' at the University of Queensland.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "build-css": "node-sass --include-path scss scss/index.scss   public/css/index.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
